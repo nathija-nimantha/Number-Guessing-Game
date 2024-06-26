@@ -12,7 +12,7 @@ guessBtn.addEventListener('click', function(){
         randomNumber = Math.floor((Math.random()*10)+1);
         result.innerHTML = 'Game Over! Start Again!';
     }else if(guess === randomNumber){
-        result.innerHTML = 'Congratulations! You guessed it right in ' + guessCount + ' guesses!';
+        result.innerHTML = 'Congratulations! You guessed it right in ' + guessCount + ' guesses! \n But you get nothing :) ';
         guessCount = 1;
     }else if(guess > randomNumber){
         result.innerHTML = 'Lower';
