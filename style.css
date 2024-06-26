@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#number {
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+#guess {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

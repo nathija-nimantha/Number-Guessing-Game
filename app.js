@@ -1,30 +1,24 @@
-let x = 10;
-let y = 20;
-let z = x + y;
+let numberInput = document.getElementById('number');
+let guessBtn = document.getElementById('btnGuess');
+let result = document.getElementById('guess');
 
-class Customer{
-    name;
-    age
-    address;
+let randomNumber = Math.floor((Math.random()*10)+1);
+let guessCount = 1;
 
-    // Customer(name, age, address){
-    //     this.name = name;
-    //     this.age = age;
-    //     this.address = address;
-    // }
-    constructor(name, age, address){
-        this.name = name;
-        this.age = age;
-        this.address = address;
+guessBtn.addEventListener('click', function(){
+    let guess = parseInt(numberInput.value);
+    if(guessCount === 3){
+        guessCount = 1;
+        randomNumber = Math.floor((Math.random()*10)+1);
+        result.innerHTML = 'Game Over! Start Again!';
+    }else if(guess === randomNumber){
+        result.innerHTML = 'Congratulations! You guessed it right in ' + guessCount + ' guesses!';
+        guessCount = 1;
+    }else if(guess > randomNumber){
+        result.innerHTML = 'Lower';
+        guessCount++;
+    }else{
+        result.innerHTML = 'Higher';
+        guessCount++;
     }
-    setName (name){
-        this.name = name;
-    }
-    getName(){
-        return this.name;
-    }
-}
-
-let customer01 = new Customer("John", 20, "244, Elm st")
-console.log(customer01.setName("Jane"));
-console.log(customer01.getName());
+});
