@@ -31,3 +31,12 @@ h1 {
 button:hover {
     background-color: #0056b3;
 }
+
+img#imgDisplay {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
